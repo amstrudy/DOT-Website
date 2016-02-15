@@ -4,9 +4,11 @@
  */
  
 $(document).ready(function () {
-
+    
+    var split = 0;
      // Declare the list of page anchors
   var anchors = ["Home", "About", "DoOneThing", "HowToPledge", "ThankYou"];
+    var liArray = ["#litop", "#liabout", "#lidot", "#lipledge", "#lithankyou"];
     var colorArray = ["#3260A9", "#14499E", "#0C3678", "#507ABC", "#14499E"];
     
     $("#fullpage").fullpage({
@@ -15,6 +17,8 @@ $(document).ready(function () {
       // When the section starts to change, the function below is called.
       // We can use this to trigger styling of the active navbar item.
       onLeave: function (index, nextIndex, direction) {
+          
+
         // Declare the name of the CSS class that defines the styling
         // for the active navbar item
         var activeClass = "active";
@@ -22,18 +26,21 @@ $(document).ready(function () {
         $("#navbar").find("a").each(function () {
           // Grab the <li> inside the <a>
           var li = $(this).find("li");
+            
           // If the <a href="..."> matches the href of the section to which we
           // are transitioning, add the style for the active navbar item.
           // Otherwise, remove the style.
+        
           if ($(this).attr("href") == "#" + anchors[nextIndex-1]) {
             li.addClass(activeClass);
+            
               
           }
           else {
             li.removeClass(activeClass);
           }
             
-            //document.getElementsByClassName("active").style.backgroundColor = colorArray[nextIndex-1];
+ //document.getElementsByClassName("active").style.backgroundColor = colorArray[nextIndex-1];
             
             /*if ($(this).attr("href") == "#Home") {
                 document.getElementById("litop").style.color = colorArray[0];
@@ -76,17 +83,44 @@ $(document).ready(function () {
           }*/
         });
       }
+
   });
-    changeColor = function(){
+    
+    
+
+    var assignIndex = function(){
         
-        $("idDoOneThing").css("background-color", "red");
+        var index;
+        
+        split = window.location.hash.split('#')[1];
+
+        if(split == "Home")
+           index = 0;
+        else if(split == "About")
+            index = 1;
+        else if(split == "DoOneThing")
+            index = 2;
+        else if(split == "HowToPledge")
+            index = 3;
+        else if(split == "ThankYou")
+            index = 4;
+            
+        return index;
         
     }
     
-    changeColorBack = function(){
+    
+    changeColor = function(i){
         
-        $("idDoOneThing").css("background-color", "");
-        console.log("hi");
+        var index = assignIndex();
+        
+        $(liArray[i]).css("background-color", colorArray[index]);
+        
+    }
+    
+    changeColorBack = function(j){
+        
+        $(liArray[j]).css("background-color", "#06977F");
         
     }
     
