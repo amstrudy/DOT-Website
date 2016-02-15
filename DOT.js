@@ -5,10 +5,39 @@
  
 $(document).ready(function () {
 
+     // Declare the list of page anchors
+  var anchors = ["Home", "About", "DoOneThing", "HowToPledge", "ThankYou"];
+    
+    $("#fullpage").fullpage({
+      // Pass in the list of page anchors
+      anchors: anchors,
+      // When the section starts to change, the function below is called.
+      // We can use this to trigger styling of the active navbar item.
+      onLeave: function (index, nextIndex, direction) {
+        // Declare the name of the CSS class that defines the styling
+        // for the active navbar item
+        var activeClass = "active";
+        // Loop over the <a>s in the navbar
+        $("#navbar").find("a").each(function () {
+          // Grab the <li> inside the <a>
+          var li = $(this).find("li");
+          // If the <a href="..."> matches the href of the section to which we
+          // are transitioning, add the style for the active navbar item.
+          // Otherwise, remove the style.
+          if ($(this).attr("href") == "#" + anchors[nextIndex-1]) {
+            li.addClass(activeClass);
+          }
+          else {
+            li.removeClass(activeClass);
+          }
+        });
+      }
+  });
+    /*
     $("#fullpage").fullpage({
         anchors: ["Home", "About", "DoOneThing", "HowToPledge", "ThankYou"]
     });
-
+*/
     //array for each DOT option
     //random array space chosen and corresponding oercent is chosen from leftArray
     //leftArray gives the percent for margin-left in css

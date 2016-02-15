@@ -192,7 +192,7 @@ h2{
 
 #navbar li{
     
-    padding-left: 
+    padding-left: 5%;
     padding-top: 20%;
     padding-bottom: 20%;
     -webkit-transition: all .75s ease;
@@ -205,7 +205,23 @@ h2{
     
 }
 
+/* Active navbar item hover styles */
+#navbar li.active:hover {
+  color:red;
+}
+
 #litop{
+    
+    padding-left: 5%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    -webkit-transition: all .75s ease;
+    -moz-transition: all .75s ease;
+    /* Firefox */
+    -o-transition: all .75s ease;
+    /* IE 9 */
+    -ms-transition: all .75s ease;
+    /* Opera */
     
     margin-top: 85%;
     
@@ -272,4 +288,42 @@ h2{
     
     font-family: candara;
     
+}
+
+/**********IPAD/TABLET*********/
+@media (max-width: 1200px){
+    
+    #secondpagep{
+        
+        font-size: 18px;
+        
+    }
+}
+
+/**********IPHONE/MOBILE*********/
+@media (max-width: 600px){
+    
+    #navbar{
+        
+        display: none;
+        
+    } 
+    
+    #fullpage{
+        
+        margin-left: 0;
+        
+    }
+    
+    #secondpagep{
+        
+        font-size: 12px;
+        
+    }
+    
+    #gwarming{
+        
+        margin-left: 29%;
+        
+    }
 }
