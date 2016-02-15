@@ -205,10 +205,20 @@ h2{
     
 }
 
+
 /* Active navbar item hover styles */
-#navbar li.active:hover {
-  color:red;
+/*#navbar li.active:hover {
+        
+  background-color: blue;
+
 }
+
+#navbar li.active {
+        
+  background-color: #005D4E;
+
+}*/
+
 
 #litop{
     
@@ -227,7 +237,7 @@ h2{
     
 }
 
-#navbar li:hover{
+/*#navbar li:hover{
     
     background-color: #3260A9;
     color: #06977F;
@@ -239,7 +249,7 @@ h2{
     -ms-transition: all .75s ease;
     /* Opera */
         
-}
+/*}*/
 
 #navbar a:visited{
     

@@ -7,6 +7,7 @@ $(document).ready(function () {
 
      // Declare the list of page anchors
   var anchors = ["Home", "About", "DoOneThing", "HowToPledge", "ThankYou"];
+    var colorArray = ["#3260A9", "#14499E", "#0C3678", "#507ABC", "#14499E"];
     
     $("#fullpage").fullpage({
       // Pass in the list of page anchors
@@ -26,13 +27,69 @@ $(document).ready(function () {
           // Otherwise, remove the style.
           if ($(this).attr("href") == "#" + anchors[nextIndex-1]) {
             li.addClass(activeClass);
+              
           }
           else {
             li.removeClass(activeClass);
           }
+            
+            //document.getElementsByClassName("active").style.backgroundColor = colorArray[nextIndex-1];
+            
+            /*if ($(this).attr("href") == "#Home") {
+                document.getElementById("litop").style.color = colorArray[0];
+                document.getElementById("liabout").style.color = colorArray[0];
+                document.getElementById("lidot").style.color = colorArray[0];
+                document.getElementById("lipledge").style.color = colorArray[0];
+                document.getElementById("lithankyou").style.color = colorArray[0];
+          }
+            
+            else if ($(this).attr("href") == "#About") {
+                document.getElementById("litop").style.color = colorArray[1];
+                document.getElementById("liabout").style.color = colorArray[1];
+                document.getElementById("lidot").style.color = colorArray[1];
+                document.getElementById("lipledge").style.color = colorArray[1];
+                document.getElementById("lithankyou").style.color = colorArray[1];
+          }
+            
+            else if ($(this).attr("href") == "#DoOneThing") {
+                document.getElementById("litop").style.color = colorArray[2];
+                document.getElementById("liabout").style.color = colorArray[2];
+                document.getElementById("lidot").style.color = colorArray[2];
+                document.getElementById("lipledge").style.color = colorArray[2];
+                document.getElementById("lithankyou").style.color = colorArray[2];
+          }
+            
+            else if ($(this).attr("href") == "#HowToPledge") {
+                document.getElementById("litop").style.color = colorArray[3];
+                document.getElementById("liabout").style.color = colorArray[3];
+                document.getElementById("lidot").style.color = colorArray[3];
+                document.getElementById("lipledge").style.color = colorArray[3];
+                document.getElementById("lithankyou").style.color = colorArray[3];
+          }
+            
+            else if ($(this).attr("href") == "#ThankYou") {
+                document.getElementById("litop").style.backgroundColor = colorArray[4];
+                document.getElementById("liabout").style.backgroundColor = colorArray[4];
+                document.getElementById("lidot").style.backgroundColor = colorArray[4];
+                document.getElementById("lipledge").style.backgroundColor = colorArray[4];
+                document.getElementById("lithankyou").style.backgroundColor = colorArray[4];
+          }*/
         });
       }
   });
+    changeColor = function(){
+        
+        $("idDoOneThing").css("background-color", "red");
+        
+    }
+    
+    changeColorBack = function(){
+        
+        $("idDoOneThing").css("background-color", "");
+        console.log("hi");
+        
+    }
+    
     /*
     $("#fullpage").fullpage({
         anchors: ["Home", "About", "DoOneThing", "HowToPledge", "ThankYou"]
