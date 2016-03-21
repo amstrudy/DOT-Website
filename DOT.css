@@ -1,6 +1,5 @@
 html, body {
 
-    /*height: 100%;*/
     margin: 0;
     overflow: auto;
 
@@ -31,7 +30,6 @@ html, body {
 #secondpage{
 
     width: 100%;
-    /*height: 100%;*/
     background-color: #14499E;
     position: relative;
 
@@ -40,7 +38,6 @@ html, body {
 #thirdpage{
 
     width: 100%;
-    /*height: 100%;*/
     background-color: #0C3678;
     position: relative;
 
@@ -108,15 +105,6 @@ html, body {
     
 }
 
-#cp{
-
-    position: absolute;
-    bottom: 0;
-    color: white;
-    right: 10px;
-
-}
-
 #gwarming{
 
     padding: 2%;
@@ -181,7 +169,7 @@ h2{
 
 #navbar ul{
    
-    padding-left: 5%;
+    padding-left: 0;
     padding-right: 0;
     list-style-type: none;
     font-family: candara;
@@ -192,7 +180,7 @@ h2{
 
 #navbar li{
     
-    padding-left: 5%;
+    padding-left: 6%;
     padding-top: 20%;
     padding-bottom: 20%;
     -webkit-transition: all .75s ease;
@@ -204,21 +192,6 @@ h2{
     /* Opera */
     
 }
-
-
-/* Active navbar item hover styles */
-/*#navbar li.active:hover {
-        
-  background-color: blue;
-
-}
-
-#navbar li.active {
-        
-  background-color: #005D4E;
-
-}*/
-
 
 #litop{
     
@@ -236,20 +209,6 @@ h2{
     margin-top: 85%;
     
 }
-
-/*#navbar li:hover{
-    
-    background-color: #3260A9;
-    color: #06977F;
-    -webkit-transition: all .75s ease;
-    -moz-transition: all .75s ease;
-    /* Firefox */
-    -o-transition: all .75s ease;
-    /* IE 9 */
-    -ms-transition: all .75s ease;
-    /* Opera */
-        
-/*}*/
 
 #navbar a:visited{
     
@@ -300,14 +259,13 @@ h2{
     
 }
 
-/**********IPAD/TABLET*********/
-@media (max-width: 1200px){
-    
-    #secondpagep{
-        
-        font-size: 18px;
-        
-    }
+#cp{
+
+    position: absolute;
+    bottom: 0;
+    color: white;
+    right: 10px;
+
 }
 
 /**********IPHONE/MOBILE*********/
@@ -336,4 +294,17 @@ h2{
         margin-left: 29%;
         
     }
+    
+    #h1{
+
+    font-size: 40px;
+
+    }
+    
+    #secondtoparrowimg, #thirdtoparrowimg, #fourthtoparrowimg, #fifthtoparrowimg, #firstarrowimg, #secondarrowimg, #thirdarrowimg, #fourtharrowimg{
+        
+        margin-left: 45%;
+        
+    }
+
 }
