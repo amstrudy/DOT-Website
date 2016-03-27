@@ -15,7 +15,7 @@ $(document).ready(function () {
       // Pass in the list of page anchors
       anchors: anchors,
       // When the section starts to change, the function below is called.
-      // We can use this to trigger styling of the active navbar item.
+      // triggers styling of the active navbar item.
       onLeave: function (index, nextIndex, direction) {
         // Declare the name of the CSS class that defines the styling
         // for the active navbar item
@@ -63,7 +63,7 @@ $(document).ready(function () {
         
         split = window.location.hash.split('#')[1];
 
-        if(split == "Home")
+        if(split == "Home" || split == undefined)
            index = 0;
         else if(split == "About")
             index = 1;
@@ -111,9 +111,9 @@ $(document).ready(function () {
     
     
     //determines the size of the navbar, only happens once when page loads
-    console.log(WIN_WIDTH);
-    WIN_WIDTH /= 8.2;
-    $("#navbar").css("width", WIN_WIDTH);
+    var newWin = WIN_WIDTH / 8.2;
+    $("#navbar").css("width", newWin);
+    //$("#fullpage").css("margin-left", newWin);
     
     
     
