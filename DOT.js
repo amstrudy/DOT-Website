@@ -44,7 +44,7 @@ $(document).ready(function () {
     
     var split;//the page location (found by looking at end of URL)
     var liArray = ["#litop", "#liabout", "#lidot", "#lipledge", "#lithankyou"];//array with each navbar li id
-    var colorArray = ["#3260A9", "#14499E", "#0C3678", "#507ABC", "#14499E"];
+    var colorArray = ["#3260A9", "#14499E", "#0C3678", "#1D478A", "#14499E"];
     var index;//which page you are on
     
     var dotArray = ["#DRIVELESS", "#UNPLUG", "#SPEAKUP", "#STOPWASTE", "#TURBOSHOWER", "#EAT4REAL", "#ROCKASWEATER", "#THRIFTSHOP"]; //array for each DOT option
@@ -111,7 +111,7 @@ $(document).ready(function () {
     
     
     //determines the size of the navbar, only happens once when page loads
-    var newWin = WIN_WIDTH / 8.2;
+    var newWin = WIN_WIDTH / 7.85;
     $("#navbar").css("width", newWin);
     //$("#fullpage").css("margin-left", newWin);
     
