@@ -86,7 +86,7 @@ html, body {
     
 }
 
-#headers{
+#headers1, #headers2, #headers3{
     
     margin-left: 25%;
     position: static;

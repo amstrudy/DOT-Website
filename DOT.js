@@ -159,5 +159,15 @@ $(document).ready(function () {
         $("#firstarrowimg").fadeIn("slow").css("display", "block");
 
     }, 1500);
+    
+    /*$(window).resize(function(){
+        
+        $("#headers1").css("margin-left", (WIN_WIDTH - (WIN_WIDTH / 8.2) - ($("#headers1").width())) / 2);
+        $("#headers2").css("margin-left", (WIN_WIDTH - (WIN_WIDTH / 8.2) - ($("#headers2").width())) / 2);
+        $("#headers3").css("margin-left", (WIN_WIDTH - (WIN_WIDTH / 8.2) - ($("#headers3").width())) / 2);
+        console.log((WIN_WIDTH - (WIN_WIDTH / 8.2) - ($("#headers3").width())) / 2);
+        
+    })*/
+    
 
 });
