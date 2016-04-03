@@ -69,10 +69,18 @@ html, body {
     color: #799CD3;
     font-size: 64px;
     position: absolute;
-    top: 30%;
+    top: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
 
+}
+
+#h2{
+    
+    color: #0C3678;
+    font-size: 36px;
+    margin-left: 20%;
+    
 }
 
 #p{
@@ -88,7 +96,7 @@ html, body {
 
 #headers1, #headers2, #headers3{
     
-    color: #C0C0C0;
+    color: #A0A0A0;
     text-align: center;
     font-family: candara, arial;
     
@@ -232,7 +240,7 @@ h2{
     margin-right: 12%;
     margin-left: 12%;
     font-size: 20px;
-    color: #888888;
+    color: #000000;
 
 }
 
@@ -335,6 +343,12 @@ h2{
     h2{
         
         font-size: 14px;
+        
+    }
+    
+    #h2{
+        
+        font-size: 20px;
         
     }
 
